@@ -1,3 +1,8 @@
+$grey: #575757;
+$greyLight: #9E9E9E;
+$green: #616E24;
+$black: #171717;
+
 *{
     box-sizing: border-box;
     margin: 0;
@@ -5,7 +10,8 @@
 }
 
 nav{
-    background-color: #C1C1C1;
+    background-color: $black;
+    color: #FFF;
     ul{
         list-style: none;
         display: flex;
@@ -14,9 +20,12 @@ nav{
         li{
             padding: 5px 10px;
             a{
-                color: #000;
+                color: #FFF;
                 font-size: 10px;
                 text-decoration: none;
+            }
+            a:hover{
+                border-bottom: 1px solid #FFF;
             }
         }
         li.pipe{
@@ -34,7 +43,7 @@ nav{
     }
     p{
         font-size: 12px;
-        margin-top: 20px;
+        margin-top: 15px;
     }
 }
 
@@ -50,7 +59,7 @@ nav{
 }
 
 .card-text{
-    font-size: 10px;
+    font-size: 12px;
     margin: 7px 15px 20px 15px;
 }
 
@@ -63,6 +72,67 @@ nav{
     margin-bottom: 5px;
 }
 
-footer {
-    background: yellow;
+.card-button{
+    background-color: $green;
+    border: none;
+    color: #FFF;
+    display: flex;
+//        align-items: center;
+    margin-top: 10px;
+    padding: 7px;
+    .fa-caret-right{
+        font-size: 16px;
+        margin-left: 7px;
+    }
 }
+
+.card-button:hover{
+    background-color: #879932;
+}
+
+footer {
+    color: $greyLight;
+    background: $grey;
+    font-size: 12px;
+    padding: 15px;
+    #footerDivWrapper{
+        display: flex;
+            justify-content: space-around;
+        font-size: 10px;
+        margin-top: 10px;
+        #footerSocialmedia{
+            font-size: 18px;
+            .fa-instagram{
+                margin-right: 5px;
+            }
+        }
+        
+}
+}
+
+@media only screen and (min-width: 768px){
+    .card{
+        display: flex;
+        img{
+            width: 50%;
+        }
+    }
+    
+    .card-1{
+        .card-text{
+            order: 1;
+        }
+        img{
+            order: 2;
+        }
+    }
+    .card-2{
+        
+    }
+}
+
+
+
+
+
+
